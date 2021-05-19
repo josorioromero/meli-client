@@ -28,7 +28,6 @@ const App = () => (
                     </Route>
 
                     <Route path="/">
-                        <Result />
                     </Route>
                 </Switch>
             </Router>
