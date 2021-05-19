@@ -17,8 +17,7 @@ app.use(morgan('common'));
 app.use(compression());
 
 // GET /items?q=:query
-app.get('items', catchUnhandledErrors((req, res) => {
-    console.log(req.query)
+app.get('/items', catchUnhandledErrors((req, res) => {
     let promise;
     if (req.query.q && req.query.q.trim()) {
         promise = fetch(`${process.env.MELI_SEARCH_SVC}?q=${req.query.q}`).then(response => response.json());
