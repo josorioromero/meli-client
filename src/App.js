@@ -13,7 +13,10 @@ const App = () => (
         <div className="app__search-bar">
             <SearchBar />
         </div>
+        <div className="app__breadcrumb"> breadcrumb </div>
         <div className="app__results">
+            <Result />
+            <Result />
             <Result /> 
         </div>
     </div>

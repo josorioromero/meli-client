@@ -1,26 +1,39 @@
 .result {
+    border-radius: 4px;
+    box-shadow: 0px 24px 3px -24px gray;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    padding: 16px 16px;
 
     &__img {
+        display: flex;
         grid-column: 1 / span 2;
         grid-row: 1 / span 2;
-        background-position: center;
-        background-image: url('../../assets/img/logo-meli.png');
-        background-repeat: no-repeat;
-        background-size: 200px 200px;
+        justify-content: center;
+
+        img {
+            border-radius: 4px;
+            height: 180px;
+            width: 180px;
+        }
     }
 
     &__location {
+        color: #999999;
+        font-size: 12px;
         grid-column: 11 / span 1;
     }
 
     &__price {
+        color: #333333;
+        font-size: 24px;
         grid-column: 3 / span 1;
     }
 
     &__title {
+        color: #333333;
+        font-size: 18px;
         grid-column: 3 / span 4;
         grid-row: 2 / span 1;
     }
