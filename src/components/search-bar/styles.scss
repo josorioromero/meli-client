@@ -4,11 +4,31 @@
     grid-template-columns: repeat(12, 1fr) ;
     height: 65px;
 
+    &__btn {
+        background-position: center;
+        background-image: url('../../assets/img/search.png');
+        background-repeat: no-repeat;
+        background-size: 20px;
+        width: 3%;
+    }
+
     &__logo {
         background-position: left;
         background-image: url('../../assets/img/logo-meli.png');
         background-repeat: no-repeat;
         background-size: 80px;
         grid-column: 2 / span 1;
+    }
+
+    &__input {
+        display: flex;
+        grid-column: 3 / span 9;
+        padding: 10px 0;
+    }
+
+    &__input-field {
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
     }
 }
