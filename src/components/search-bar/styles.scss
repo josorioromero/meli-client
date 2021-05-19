@@ -17,12 +17,12 @@
         background-image: url('../../assets/img/logo-meli.png');
         background-repeat: no-repeat;
         background-size: 80px;
-        grid-column: 2 / span 1;
+        grid-column: 3 / span 1;
     }
 
     &__input {
         display: flex;
-        grid-column: 3 / span 9;
+        grid-column: 4 / span 7;
         padding: 10px 0;
     }
 

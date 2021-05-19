@@ -6,13 +6,11 @@ body {
     background-color: #EEEEEE;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 100vh;
 
     &__breadcrumb {
         color: #999999;
         padding: 16px 16px;
-        grid-column: 2 / span 10;
+        grid-column: 3 / span 8;
         grid-row: 2 / span 1;
         font-size: 14px;
     }
@@ -20,7 +18,7 @@ body {
     &__results {
         background-color: white;
         border-radius: 4px;
-        grid-column: 2 / span 10;        
+        grid-column: 3 / span 8;        
     }
 
     &__search-bar {

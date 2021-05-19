@@ -8,8 +8,8 @@ const SearchBar = () => (
     <div className="search-bar">
         <div className="search-bar__logo" />
         <div className="search-bar__input">
-            <input className="search-bar__input-field" type="text" placeholder="Nunca dejes de buscar" />
-            <button className="search-bar__btn" />
+            <input className="search-bar__input-field" placeholder="Nunca dejes de buscar" type="text" />
+            <button aria-label="search-btn" className="search-bar__btn" type="submit" />
         </div>
     </div>
 );

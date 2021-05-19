@@ -1,18 +1,18 @@
 // @vendors
-import React from 'react'
+import React from 'react';
 
 // @styles
 import './styles.scss';
 
-const Result= () => (
+const Result = () => (
     <div className="result">
         <div className="result__img">
-            <img src={process.env.PUBLIC_URL + '/logo-meli.png'}/>
+            <img src={process.env.PUBLIC_URL + '/logo-meli.png'} />
         </div>
         <div className="result__price">$200</div>
         <div className="result__title">Iphone nuevo</div>
         <div className="result__location">Mendoza</div>
     </div>
-)
+);
 
 export default Result;
