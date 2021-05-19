@@ -1,0 +1,14 @@
+.search-bar {
+    background-color: #FFE600;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+    height: 65px;
+
+    &__logo {
+        background-position: left;
+        background-image: url('../../assets/img/logo-meli.png');
+        background-repeat: no-repeat;
+        background-size: 80px;
+        grid-column: 2 / span 1;
+    }
+}
