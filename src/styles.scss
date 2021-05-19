@@ -1,3 +1,12 @@
 .app {
-    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    &__results {
+        grid-column: 2 / span 10;        
+    }
+
+    &__search-bar {
+        grid-column: 1 / span 12;
+    }
 }

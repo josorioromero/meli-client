@@ -1,0 +1,27 @@
+.result {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    &__img {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        background-position: center;
+        background-image: url('../../assets/img/logo-meli.png');
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+    }
+
+    &__location {
+        grid-column: 11 / span 1;
+    }
+
+    &__price {
+        grid-column: 3 / span 1;
+    }
+
+    &__title {
+        grid-column: 3 / span 4;
+        grid-row: 2 / span 1;
+    }
+}
