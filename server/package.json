@@ -17,28 +17,28 @@
     "test": "jest --detectOpenHandles --forceExit"
   },
   "dependencies": {
-    "compression": "^1.7.4",
-    "dotenv": "^9.0.2",
-    "errorhandler": "^1.5.1",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0",
-    "node-fetch": "^2.6.1"
+    "compression": "1.7.4",
+    "dotenv": "9.0.2",
+    "errorhandler": "1.5.1",
+    "express": "4.17.1",
+    "morgan": "1.10.0",
+    "node-fetch": "2.6.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/node": "^7.14.2",
-    "@babel/preset-env": "^7.14.2",
-    "@types/compression": "^1.7.0",
-    "@types/dotenv": "^8.2.0",
-    "@types/errorhandler": "^1.5.0",
-    "@types/express": "^4.17.11",
-    "@types/jest": "^26.0.23",
-    "@types/morgan": "^1.9.2",
-    "@types/node": "^15.3.0",
-    "babel-jest": "^26.6.3",
-    "cors": "^2.8.5",
-    "jest": "^26.6.3",
-    "nodemon": "^2.0.7"
+    "@babel/cli": "7.14.3",
+    "@babel/core": "7.14.3",
+    "@babel/node": "7.14.2",
+    "@babel/preset-env": "7.14.2",
+    "@types/compression": "1.7.0",
+    "@types/dotenv": "8.2.0",
+    "@types/errorhandler": "1.5.0",
+    "@types/express": "4.17.11",
+    "@types/jest": "26.0.23",
+    "@types/morgan": "1.9.2",
+    "@types/node": "15.3.0",
+    "babel-jest": "26.6.3",
+    "cors": "2.8.5",
+    "jest": "26.6.3",
+    "nodemon": "2.0.7"
   }
 }

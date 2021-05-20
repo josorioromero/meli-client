@@ -19,6 +19,12 @@ const SearchBar = () => {
                 <input
                     className="search-bar__input-field"
                     onChange={(event) => setQuery(event.target.value)}
+                    onKeyDown={(event) => {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            dispatch(getResults(query));
+                        }
+                    }}
                     placeholder="Nunca dejes de buscar"
                     type="text"
                     value={query}
