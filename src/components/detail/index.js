@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 // @actions
-import { getItemDetails } from '../../actions';
+import { clearDetails, getItemDetails } from '../../actions';
 
 // @utils
 import { getValue } from '../../utils';
@@ -22,9 +22,15 @@ const Detail = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
     const itemDetails = useSelector(state => state.get('itemDetails'));
-    const { item, loading } = itemDetails.toJS();
+    const { item } = itemDetails.toJS();
 
     useEffect(() => dispatch(getItemDetails(id)), []);
+
+    useEffect(() => {
+        window.onpopstate = () => {
+            dispatch(clearDetails());
+        };
+    }, [])
 
     return (
         <div className="detail">

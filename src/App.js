@@ -26,7 +26,7 @@ const App = () => {
                 <SearchBar />
             </div>
             <div className="app__breadcrumb">
-                { categories.join(' > ') }
+                { categories && !!categories.length ? categories.join(' > ') : null }
             </div>
             <div className="app__results">
                 <Router>

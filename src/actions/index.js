@@ -9,6 +9,11 @@ export const getResults = query => dispatch =>
             dispatch({ type: GET_RESULTS, payload: data });
         });
 
+export const CLEAR_DETAILS = 'CLEAR_DETAILS';
+export const clearDetails = () => ({
+    type: CLEAR_DETAILS
+});
+
 export const GET_ITEM_DETAILS = 'GET_ITEM_DETAILS';
 export const getItemDetails = id => dispatch => 
     fetch(`${API_SERVICE_URL}/${id}`)

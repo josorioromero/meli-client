@@ -3,6 +3,7 @@ import { fromJS } from 'immutable';
 
 // @actions
 import {
+    CLEAR_DETAILS,
     GET_RESULTS,
     GET_ITEM_DETAILS,
 } from '../actions';
@@ -48,6 +49,10 @@ export const itemsReducer = (state = initialState, action) => {
         case GET_ITEM_DETAILS:
             return state.merge({
                 itemDetails: fromJS(action.payload)
+            });
+        case CLEAR_DETAILS:
+            return state.merge({
+                itemDetails: initialState.get('itemDetails')
             });
         default:
             return state;
