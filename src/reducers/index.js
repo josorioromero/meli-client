@@ -5,7 +5,14 @@ import { fromJS } from 'immutable';
 import { GET_RESULTS, GET_ITEM_DETAILS } from '../actions';
 
 const initialState = fromJS({
-    results: [],
+    results: {
+        author: {
+            name: '',
+            lastname: ''
+        },
+        categories: [],
+        items: []
+    },
     itemDetails: {
         author: {
             name: '',

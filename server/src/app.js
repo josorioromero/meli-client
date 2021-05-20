@@ -1,5 +1,6 @@
 // @vendors
 import compression from 'compression';
+import cors from 'cors';
 import errorhandler from 'errorhandler';
 import express from 'express';
 import morgan from 'morgan';
@@ -15,6 +16,7 @@ const app = express();
 
 app.use(morgan('common'));
 app.use(compression());
+app.use(cors());
 
 // GET /items?q=:query
 app.get('/items', catchUnhandledErrors((req, res) => {
@@ -47,8 +49,8 @@ app.get('/items', catchUnhandledErrors((req, res) => {
                         title: article.title,
                         price: {
                             currency: article.currency_id,
-                            amount: article.available_quantity,
-                            decimals: article.price
+                            amount: article.price,
+                            decimals: 0
                         },
                         picture: article.thumbnail,
                         condition: article.condition,
@@ -94,8 +96,8 @@ app.get('/items/:id', catchUnhandledErrors((req, res) => {
                             title: article.title,
                             price: {
                                 currency: article.currency_id,
-                                amount: article.available_quantity,
-                                decimals: article.price
+                                amount: article.price,
+                                decimals: 0
                             },
                             picture: article.pictures && article.pictures.length > 0 ? article.pictures[0].url : article.thumbnail,
                             condition: article.condition,
