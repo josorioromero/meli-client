@@ -1,25 +1,47 @@
 // @vendor
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+// @actions
+import { getItemDetails } from '../../actions';
+
+// @utils
+import { getValue } from '../../utils';
 
 // @styles
 import './styles.scss';
 
+// @contants
+const CONDITION_MAP = {
+    new: 'Nuevo',
+    used: 'Usado'
+};
+
 const Detail = () => {
     const { id } = useParams();
+    const dispatch = useDispatch();
+    const itemDetails = useSelector(state => state.get('itemDetails'));
+    const { item, loading } = itemDetails.toJS();
+
+    useEffect(() => dispatch(getItemDetails(id)), []);
+
+    if (loading) {
+        return <span>Loading...</span>;
+    }
 
     return (
         <div className="detail">
             <div className="detail__img">
-                <img src={process.env.PUBLIC_URL + '/logo-meli.png'} />
+                <img src={item.picture} />
             </div>
             <div className="detail__status">
-                Nuevo - 234 vendidos
+                {`${CONDITION_MAP[item.condition]} - ${item.sold_quantity} vendidos`}
             </div>
             <div className="detail__title">
-                Deco reverse sombrero oxford
+                {item.title}
                 <div className="detail__price">
-                    $ 1.980
+                    {getValue(item.price)}
                 </div>
             </div>
             <div className="detail__btn-section">
@@ -31,10 +53,7 @@ const Detail = () => {
                 Descripción del producto
             </div>
             <div className="detail__description-content">
-                Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit
-                Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit
-                Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit
-                Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit
+                {item.description}
             </div>
         </div>
     );

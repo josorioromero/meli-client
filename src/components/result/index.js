@@ -2,18 +2,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// @utils
+import { getValue } from '../../utils';
+
 // @styles
 import './styles.scss';
-
-const getValue = ({ amount, currency, decimals }) => {
-    const formatter = new Intl.NumberFormat('es-AR', {
-        style: 'currency',
-        currency: currency,
-        minimumFractionDigits: decimals
-    });
-
-    return formatter.format(amount);
-};
 
 const Result = ({ item }) => (
     <div className="result">

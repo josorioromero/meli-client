@@ -1,14 +1,12 @@
 // @vendors
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
     BrowserRouter as Router,
+    Link,
     Switch,
     Route
 } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-
-// @actions
-import { getResults } from './actions';
+import { useSelector } from 'react-redux';
 
 // @components
 import Detail from './components/detail';
@@ -20,14 +18,16 @@ import './styles.scss';
 
 const App = () => {
    const results = useSelector(state => state.get('results'));
-   const items = results && results.items ? results.items : [];
+   const { categories, items } = results.toJS();
 
     return (
         <div className="app">
             <div className="app__search-bar">
                 <SearchBar />
             </div>
-            <div className="app__breadcrumb"> breadcrumb </div>
+            <div className="app__breadcrumb">
+                { categories.join(' > ') }
+            </div>
             <div className="app__results">
                 <Router>
                     <Switch>
@@ -37,7 +37,12 @@ const App = () => {
     
                         <Route path="/">
                             {
-                                !!items.length && items.map(item => <Result item={item} />)
+                                !!items.length && items
+                                    .map((item, idx) => (
+                                        <Link key={idx} to={`/detail/${item.id}`}>
+                                            <Result key={idx} item={item} />
+                                        </Link>
+                                    ))
                             }
                         </Route>
                     </Switch>
