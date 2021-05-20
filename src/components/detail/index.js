@@ -21,7 +21,7 @@ const CONDITION_MAP = {
 const Detail = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
-    const itemDetails = useSelector(state => state.get('itemDetails'));
+    const itemDetails = useSelector((state) => state.get('itemDetails'));
     const { item } = itemDetails.toJS();
 
     useEffect(() => dispatch(getItemDetails(id)), []);
@@ -30,7 +30,7 @@ const Detail = () => {
         window.onpopstate = () => {
             dispatch(clearDetails());
         };
-    }, [])
+    }, []);
 
     return (
         <div className="detail">

@@ -1,7 +1,7 @@
 export const getValue = ({ amount, currency, decimals }) => {
     const formatter = new Intl.NumberFormat('es-AR', {
         style: 'currency',
-        currency: currency,
+        currency,
         minimumFractionDigits: decimals
     });
 

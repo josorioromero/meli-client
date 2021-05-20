@@ -18,7 +18,7 @@ const SearchBar = () => {
             <div className="search-bar__input">
                 <input
                     className="search-bar__input-field"
-                    onChange={event => setQuery(event.target.value)}
+                    onChange={(event) => setQuery(event.target.value)}
                     placeholder="Nunca dejes de buscar"
                     type="text"
                     value={query}

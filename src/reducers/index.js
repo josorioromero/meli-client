@@ -5,7 +5,7 @@ import { fromJS } from 'immutable';
 import {
     CLEAR_DETAILS,
     GET_RESULTS,
-    GET_ITEM_DETAILS,
+    GET_ITEM_DETAILS
 } from '../actions';
 
 const initialState = fromJS({
@@ -15,7 +15,7 @@ const initialState = fromJS({
             lastname: ''
         },
         categories: [],
-        items: [],
+        items: []
     },
     itemDetails: {
         author: {
@@ -36,7 +36,7 @@ const initialState = fromJS({
             free_shiping: false,
             sold_quantity: 0,
             description: ''
-        },
+        }
     }
 });
 
@@ -57,4 +57,4 @@ export const itemsReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};

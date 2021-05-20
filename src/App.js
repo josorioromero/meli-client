@@ -17,8 +17,8 @@ import SearchBar from './components/search-bar';
 import './styles.scss';
 
 const App = () => {
-   const results = useSelector(state => state.get('results'));
-   const { categories, items } = results.toJS();
+    const results = useSelector((state) => state.get('results'));
+    const { categories, items } = results.toJS();
 
     return (
         <div className="app">
@@ -34,13 +34,13 @@ const App = () => {
                         <Route path="/detail/:id">
                             <Detail />
                         </Route>
-    
+
                         <Route path="/">
                             {
                                 !!items.length && items
                                     .map((item, idx) => (
                                         <Link key={idx} to={`/detail/${item.id}`}>
-                                            <Result key={idx} item={item} />
+                                            <Result item={item} key={idx} />
                                         </Link>
                                     ))
                             }
