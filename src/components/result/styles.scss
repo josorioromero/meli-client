@@ -36,6 +36,12 @@
         font-size: 24px;
         grid-column: 3 / span 1;
         margin-bottom: 32px;
+
+        img {
+            height: 24px;
+            margin-left: 1rem;
+            width: 24px;
+        }
     }
 
     &__title {

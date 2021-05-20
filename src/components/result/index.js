@@ -13,7 +13,10 @@ const Result = ({ item }) => (
         <div className="result__img">
             <img src={item.picture} />
         </div>
-        <div className="result__price">{getValue(item.price)}</div>
+        <div className="result__price">
+            {getValue(item.price)}
+            {item.free_shipping && <img src={`${process.env.PUBLIC_URL}/shipping-icon.png`} />}
+        </div>
         <div className="result__title">{item.title}</div>
         <div className="result__location">{`${item.location.city}, ${item.location.state}`}</div>
     </div>
