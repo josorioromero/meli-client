@@ -26,10 +26,6 @@ const Detail = () => {
 
     useEffect(() => dispatch(getItemDetails(id)), []);
 
-    if (loading) {
-        return <span>Loading...</span>;
-    }
-
     return (
         <div className="detail">
             <div className="detail__img">
