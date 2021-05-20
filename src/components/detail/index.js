@@ -33,7 +33,7 @@ const Detail = () => {
     }, []);
 
     return (
-        <div className="detail">
+        <div className="detail" data-testid="detail-component">
             <div className="detail__img">
                 <img src={item.picture} />
             </div>

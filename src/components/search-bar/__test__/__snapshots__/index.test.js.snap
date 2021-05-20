@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar Component renders correctly 1`] = `
+<div>
+  <div
+    class="search-bar"
+  >
+    <div
+      class="search-bar__logo"
+    />
+    <div
+      class="search-bar__input"
+    >
+      <input
+        class="search-bar__input-field"
+        placeholder="Nunca dejes de buscar"
+        type="text"
+        value=""
+      />
+      <button
+        aria-label="search-btn"
+        class="search-bar__btn"
+        type="submit"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Detail Component renders correctly 1`] = `
+<div>
+  <div
+    class="detail"
+    data-testid="detail-component"
+  >
+    <div
+      class="detail__img"
+    >
+      <img
+        src=""
+      />
+    </div>
+    <div
+      class="detail__status"
+    >
+      undefined - 0 vendidos
+    </div>
+    <div
+      class="detail__title"
+    >
+      
+      <div
+        class="detail__price"
+      >
+        $ 0
+      </div>
+    </div>
+    <div
+      class="detail__btn-section"
+    >
+      <button
+        class="detail__btn"
+        type="submit"
+      >
+        Comprar
+      </button>
+    </div>
+    <div
+      class="detail__description-title"
+    >
+      Descripción del producto
+    </div>
+    <div
+      class="detail__description-content"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result Component renders correctly 1`] = `
+<div>
+  <div
+    class="result"
+  >
+    <div
+      class="result__img"
+    >
+      <img
+        src=""
+      />
+    </div>
+    <div
+      class="result__price"
+    >
+      $ 0
+    </div>
+    <div
+      class="result__title"
+    />
+    <div
+      class="result__location"
+    >
+      , 
+    </div>
+  </div>
+</div>
+`;

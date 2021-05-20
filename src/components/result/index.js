@@ -46,7 +46,7 @@ Result.defaultProps = {
         picture: '',
         price: {
             amount: 0,
-            currency: '',
+            currency: 'ARS',
             decimals: 0
         },
         title: ''
